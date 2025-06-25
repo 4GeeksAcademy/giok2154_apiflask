@@ -25,7 +25,7 @@ def todo(position):
     if position >= len(todos):
         response_body['message'] = f'El ToDo {position} no existe'
         response_body['results'] = {}
-        return response_body, 404
+        return response_body, 403
     if request.method == 'GET':
         response_body['message'] = f'Los datos del ToDo {position} son los siguientes'
         response_body['results'] = todos[position]
